@@ -52,7 +52,8 @@ class MainAdapter(
     Swirl,
     Brightness,
     Kuawahara,
-    Vignette
+    Vignette,
+    CropSpace
   }
 
   override fun getItemCount(): Int {
@@ -191,6 +192,11 @@ class MainAdapter(
         .load(R.drawable.check)
         .apply(bitmapTransform(VignetteFilterTransformation(PointF(0.5f, 0.5f),
           floatArrayOf(0.0f, 0.0f, 0.0f), 0f, 0.75f)).dontAnimate())
+        .into(holder.image)
+
+      CropSpace -> Glide.with(context)
+        .load(R.drawable.demo)
+        .apply(bitmapTransform(CropSpace()))
         .into(holder.image)
     }
     holder.title.text = dataSet[position].name

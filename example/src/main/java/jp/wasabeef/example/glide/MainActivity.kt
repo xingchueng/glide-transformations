@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
       adapter = MainAdapter(context, mutableListOf(
         Mask, NinePatchMask, RoundedCorners, CropTop, CropCenter, CropBottom, CropSquare, CropCircle,
         CropCircleWithBorder, Grayscale, BlurLight, BlurDeep, Toon, Sepia, Contrast, Invert,
-        Pixel, Sketch, Swirl, Brightness, Kuawahara, Vignette
+        Pixel, Sketch, Swirl, Brightness, Kuawahara, Vignette, CropSpace
       ))
     }
   }
